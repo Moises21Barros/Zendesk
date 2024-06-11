@@ -68,11 +68,11 @@ ul li {
     color: #333;
 }
 
-*/ body {
+body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #e    ee6d5;
+    background-color: #D6D9D0;
     /* Cor de fundo */
 }
 
@@ -143,9 +143,40 @@ ul li {
     border-radius: 5px;
     color: #333;
 }
+
 .center-img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    max-width: 100%; /* Garante que a imagem não ultrapasse o tamanho do contêiner */
+    max-width: 100%;
+    /* Garante que a imagem não ultrapasse o tamanho do contêiner */
+}
+
+.container img {
+    display: block;
+    margin: 20px auto;
+    /* Centraliza a imagem e adiciona espaçamento */
+    border: 2px solid #ddd;
+    /* Borda leve */
+    border-radius: 8px;
+    /* Borda arredondada */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Sombra */
+    max-width: 100%;
+    /* Faz a imagem responsiva */
+    height: auto;
+    /* Mantém a proporção da imagem */
+}
+
+
+.image-row {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    /* Espaçamento entre as imagens */
+}
+
+.product-image {
+    width: 500px;
+    /* Ajustar a largura conforme necessário */
 }
