@@ -32,7 +32,12 @@ document.addEventListener('DOMContentLoaded', function() {
 let cart = [];
 
 function addToCart(productName, productPrice) {
-    cart.push({ name: productName, price: productPrice });
+    const existingProduct = cart.find(item => item.name === productName);
+    if (existingProduct) {
+        existingProduct.quantity += 1;
+    } else {
+        cart.push({ name: productName, price: productPrice, quantity: 1 });
+    }
     displayCart();
 }
 
@@ -41,11 +46,11 @@ function displayCart() {
     cartItemsContainer.innerHTML = '';
     let total = 0;
 
-    cart.forEach((item, index) => {
+    cart.forEach((item) => {
         const li = document.createElement('li');
-        li.textContent = `${item.name} - R$ ${item.price}`;
+        li.textContent = `${item.name} - R$ ${item.price} x ${item.quantity}`;
         cartItemsContainer.appendChild(li);
-        total += item.price;
+        total += item.price * item.quantity;
     });
 
     document.getElementById('cart-total').textContent = total.toFixed(2);
