@@ -29,6 +29,8 @@ header {
     color: #fff;
     padding: 20px 0;
     text-align: center;
+    position: relative;
+    /* Garante que o posicionamento relativo funcione para o ícone */
 }
 
 nav {
@@ -111,11 +113,26 @@ nav a:hover {
 /* Carrinho */
 #cart {
     margin-top: 50px;
+    position: relative;
+    /* Garante que o posicionamento do carrinho funcione */
 }
 
 #cart-items {
     list-style-type: none;
     padding: 0;
+}
+
+#cart button {
+    padding: 10px 20px;
+    background-color: #57613C;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#cart button:hover {
+    background-color: #acb48f;
 }
 
 /* Rodapé */
@@ -143,4 +160,25 @@ footer {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     /* Certifica-se de que o carrinho esteja acima de outros elementos */
+}
+
+/* Estilo para o ícone de carrinho */
+#cart-icon {
+    position: absolute;
+    top: 0;
+    right: -20px;
+    /* Ajuste fino para posicionar o ícone ao lado do texto */
+    font-size: 20px;
+}
+
+/* Ajuste para o combo de 3 mesas */
+.product-item.combo-mesa .product-image {
+    max-width: 450px;
+    /* Tamanho maior para o combo de mesas */
+}
+
+/* Ajuste para o combo de 3 cadeiras */
+.product-item.combo-cadeira .product-image {
+    max-width: 450px;
+    /* Tamanho maior para o combo de cadeiras */
 }
